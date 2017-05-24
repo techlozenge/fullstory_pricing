@@ -1,0 +1,452 @@
+// **************** //
+//     DEFAULTS     //
+// **************** //
+
+// NOTE: ONCE I HAVE TIME I'LL BREAK OUT THE DIFFERENT SECTION INTO THEIR OWN PARTIALS
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background-color;
+  color:white;
+  font-family: helvetica;
+  font-size: 16px
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+
+
+// ******************************** //
+// REUSABLE MASTHEAD & HERO CLASSES //
+// ******************************** //
+
+#masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 0px;
+  height: 100px;
+  width: 100%;
+  //background-image: $background-image;
+  font-size: 25px;
+}
+
+#masthead a, #footer a {
+  text-decoration: none;
+  color: white;
+}
+
+#nav-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 25px;
+}
+
+.nav-link{
+  display: inline-block;
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#hero-content {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  font-family: helvetica;
+  text-shadow: 2px 2px black;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: $background-image;
+}
+
+/* STYLING FOR INPUT EMAIL ADDRESS & GO BUTTON */
+
+input {
+    //position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Whitney SSm A", "Whitney SSm B", Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    background: #fff;
+    color: #438ee1;
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 100px 0 0 100px;
+    outline: none;
+    width: 75%;
+    height: 40px;
+}
+
+.button_style {
+  margin: 0px;
+  width: 55px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  background-color: blue;
+  font-size: 20px;
+}
+
+
+// ************************ //
+// REUSABLE PRICING CLASSES //
+// ************************ //
+
+.price-choice-container {
+  width: 100%;
+  //border: 1px solid red;
+}
+
+.price-choices {
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  width: 100%;
+  font-size: 28px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.price-choice-item {
+    color: black;
+    word-wrap: normal;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    width: 100%;
+    border: 1px solid black;
+}
+
+#the-choice {
+  color: white;
+  background-color: blue;
+}
+
+.pricing_content {
+  // the next two lines overlaps the top of pricing with bottom of hero
+  position: relative;
+  top: -20px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.pricing {
+  width: 900px;
+  height: 400px;
+  margin: 5px;
+  padding-bottom: 5%;
+  background-color: $pricing_bkgrnd_color;
+  color: black;
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-content: center;
+}
+
+#free-style {
+  color: white;
+  background-color: blue;
+}
+
+.free_h1 {
+  color: #80a5e5;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.free_h4 {
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.flexcontainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width: 900px;
+  margin-bottom: 10px;
+}
+
+.flex-item {
+    background-color: $pricing_bkgrnd_color;
+    // border: 1px solid black;
+    color: black;
+    width: 25%;
+    word-wrap: normal;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.flex-item a:hover {
+  background-color: lightblue;
+}
+
+.flex-item-paid {
+  background-color: $pricing_bkgrnd_color;
+  // border: 1px solid gray;
+  color: darkgray;
+  width: 25%;
+  word-wrap: normal;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+
+// ************************ //
+// REUSABLE PACKAGE CLASSES //
+// ************************ //
+
+.package {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.package-intro {
+    width: 40%;
+    color: white;
+    background-color: #93b6f2;
+    border: 1px solid white;
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.pkg-title {
+  font-size: 20px;
+}
+
+.pkg-desc {
+  font-size: 15px;
+}
+
+.package-items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-left: 25px;
+  padding-top: 35px;
+  padding-right: 25px;
+  width: 40%;
+  border: 1px solid white;
+  margin-bottom: 15px;
+}
+
+.package-items a:hover {
+  background-color: lightblue;
+}
+
+
+// ******************** //
+// REUSABLE FAQ CLASSES //
+// ******************** //
+
+.faq-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  // border: 1px solid red;
+  margin-bottom: 50px;
+  margin-left: 100px;
+  margin-right: 10px;
+}
+
+.faq-item {
+  background-color: white;
+  color: black;
+  width: 40%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+
+  margin-left: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  // border: 1px solid blue;
+}
+
+.faq-item h2 {
+  font-size: 25px;
+  color: #42c5f4;
+}
+
+.faq-item p {
+  font-size: 18px;
+  color: #a7abaf;
+}
+
+
+#shift1 {
+  order: 1;
+}
+#shift3 {
+  order: 3;
+}
+#shift5 {
+  order: 5;
+}
+
+#shift0 {
+  order: 0;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-right: 15px;
+}
+#shift2 {
+  order: 2;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  margin-right: 15px;
+}
+#shift4 {
+  order: 4;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  margin-right: 15px;
+}
+
+
+// *********************** //
+// REUSABLE FOOTER CLASSES //
+// *********************** //
+
+#footer {
+  height: 420px;
+  width: 100%;
+  background-color: $footer_bkgrnd_color;
+}
+
+
+   // FOOTER TOPROW CUSTOMERS
+
+    .toprow {
+      width: 75%;
+      padding-top: 25px;
+      padding-left: 250px;
+      font-size: 25px;
+      height: 50px;
+      background-color: $footer_bkgrnd_color;
+      //color: black;
+
+      margin-bottom: 25px; // Bumps top row down a little
+    }
+
+    .toprow-container {
+      display: flex;
+      align-content: flex-end;
+      justify-content: center;
+
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .toprow-item {
+        background-color: $footer_bkgrnd_color;
+        color: white;
+        // width: 30%;  // sets spacing between top row links - needs icons!
+        word-wrap: normal;
+        padding: 5px 5px 5px 5px;
+        text-align: center;
+        margin-bottom: 5px;
+        margin-right: 10px;
+    }
+
+    .toprow-item a:hover {
+      background-color: lightblue;
+    }
+
+
+    // FOOTER LINKS
+
+    .links {
+      width: 80%;
+      padding-top: 25px;
+      padding-left: 250px;
+      font-size: 14px;
+      height: 50px;
+      background-color: $footer_bkgrnd_color;
+    }
+
+#heading {
+  font-size: 15px;
+}
+
+    .links-container {
+      display: flex;
+      align-content: flex-end;
+      //justify-content: center;
+
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .link-item {
+        background-color: $footer_bkgrnd_color;
+        color: #b9bbbf;
+        width: 30%;  // sets spacing between top row links - needs icons!
+        word-wrap: normal;
+        padding: 5px 5px 5px 5px;
+        text-align: left;
+        margin-bottom: 5px;
+        margin-right: 10px;
+    }
+
+    .link-dim {
+        background-color: $footer_bkgrnd_color;
+        color: #b9bbbf;
+        width: 30%;  // sets spacing between top row links - needs icons!
+        word-wrap: normal;
+        padding: 5px 5px 5px 5px;
+        text-align: left;
+        margin-bottom: 5px;
+        margin-right: 10px;
+    }
+
+    .link-item a:hover {
+      background-color: lightblue;
+    }
+
+    .link-dim a:hover {
+      background-color: lightblue;
+    }
+
+
+// END
