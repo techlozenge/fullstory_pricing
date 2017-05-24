@@ -339,4 +339,18 @@ input {
 .link-dim a:hover {
   background-color: lightblue; }
 
+/* MEDIA QUERY */
+@media screen and (max-width: 800px) {
+  .footer {
+    display: none; }
+
+  .links {
+    display: none; }
+
+  .links-container {
+    display: none; }
+
+  .toprow-container {
+    display: none; } }
+
 /*# sourceMappingURL=fs_free_common.css.map */
