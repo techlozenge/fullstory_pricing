@@ -452,6 +452,9 @@ input {
 /* MEDIA QUERY */
 
 @media screen and (max-width: 800px) {
+  body {
+    border-collapse: collapse;
+  }
   .footer {
     display: none;
   }
